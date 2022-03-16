@@ -13,5 +13,8 @@ namespace GHAS.Test
             string str = null;
             int length = str.Length;
         }
+
+        void EmptyMethod()
+        { }
     }
 }
