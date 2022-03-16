@@ -16,7 +16,7 @@ namespace GHAS.Test
 
         void EmptyMethod()
         {
-            // A helpful comment! Neener
+            // A helpful comment!
             string s = "abc";
             string x = (string)s;
         }
