@@ -18,7 +18,7 @@ namespace GHAS.Test
         {
             // A helpful comment!
             string s = "abc";
-            string x = s;
+            // string x = s;
         }
     }
 }
