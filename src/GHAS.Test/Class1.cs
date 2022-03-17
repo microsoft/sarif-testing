@@ -16,8 +16,9 @@ namespace GHAS.Test
 
         void EmptyMethod()
         {
+            // A helpful comment! ghgfh
             string s = "abc";
-            string x = (string)s;
+            string x = s;
         }
     }
 }
