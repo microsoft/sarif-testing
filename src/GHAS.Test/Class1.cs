@@ -14,7 +14,7 @@ namespace GHAS.Test
             int length = str.Length;
         }
 
-        void EmptyMethod()
+        void HelperMethod()
         {
             // A helpful comment! ghgfh
             string s = "abc";
