@@ -18,6 +18,7 @@ namespace GHAS.Test
         {
             // A helpful comment! ghgfh
             string s = "abc";
+            string str = s;
         }
     }
 }
