@@ -19,6 +19,7 @@ namespace GHAS.Test
             // A helpful comment! ghgfh
             string s = "abc";
             string x = s;
+            string y = x; // Test push
         }
     }
 }
