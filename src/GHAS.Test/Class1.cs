@@ -20,7 +20,7 @@ namespace GHAS.Test
             string s = "abc";
             string x = s;
             string str = null;
-            int l = str.Length;
+            int l = str.Length; // This should trigger a result
         }
     }
 }
