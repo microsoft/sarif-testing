@@ -17,13 +17,22 @@ namespace GHAS.Test
             // Try again
         }
 
-        void EmptyMethod()
+        void UselessMethod()
         {
             // A helpful comment! ghgfh
             string s = "abc";
             string x = s;
             string str = null;
             int l = str.Length; // This should trigger a result
+        }
+
+        void AnotherMethod(string str)
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                Console.WriteLine($"The length of {nameof(str)} is " + str.Length);
+                str = str.Substring(0, str.Length - 1);
+            }
         }
     }
 }
