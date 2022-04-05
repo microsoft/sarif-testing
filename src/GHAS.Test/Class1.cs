@@ -28,6 +28,7 @@ namespace GHAS.Test
 
         void AnotherMethod(string str)
         {
+            // Do tha loop
             for (int i = 0; i < 10; i++)
             {
                 // This is smart.
