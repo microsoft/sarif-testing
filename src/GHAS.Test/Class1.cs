@@ -30,6 +30,7 @@ namespace GHAS.Test
         {
             for (int i = 0; i < 10; i++)
             {
+                // This is smart.
                 Console.WriteLine($"The length of {nameof(str)} is " + str.Length);
                 str = str.Substring(0, str.Length - 1);
             }
