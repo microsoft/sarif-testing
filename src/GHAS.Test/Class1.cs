@@ -21,14 +21,13 @@ namespace GHAS.Test
         {
             // A helpful comment! ghgfh
             string s = "abc";
-            string x = s;
             string str = null;
             int l = str.Length; // This should trigger a result
         }
 
         void AnotherMethod(string str)
         {
-            // Do tha loop
+            // Do tha loopty loop
             for (int i = 0; i < 10; i++)
             {
                 // This is smart.
