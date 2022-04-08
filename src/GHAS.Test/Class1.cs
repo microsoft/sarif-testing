@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GHAS.Test
 {
@@ -25,6 +21,10 @@ namespace GHAS.Test
             int l = str.Length; // This should trigger a result
         }
 
+        /// <summary>
+        /// Doc comment
+        /// </summary>
+        /// <param name="str">String.</param>
         void AnotherMethod(string str)
         {
             // Do tha loopty loop
