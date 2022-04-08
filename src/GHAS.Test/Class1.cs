@@ -7,7 +7,7 @@ namespace GHAS.Test
         void MyMethod()
         {
             string str = null;
-            int length = str.Length;
+            int length = str.Length; // I think this is wrong
         }
 
         void UselessMethod()
