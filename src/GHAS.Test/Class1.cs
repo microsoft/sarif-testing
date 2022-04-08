@@ -8,9 +8,6 @@ namespace GHAS.Test
         {
             string str = null;
             int length = str.Length;
-            string str2 = null;
-            int l = str2.Length;
-            // Try again
         }
 
         void UselessMethod()
