@@ -11,7 +11,6 @@ namespace GHAS.Test
             string str = null;
             int length = str.Length;
         }
-        */
 
         void EmptyMethod()
         {
@@ -19,6 +18,7 @@ namespace GHAS.Test
             string s = "abc";
             string x = s;
         }
+        */
 
         public string ReadFileContents(string path)
         {
