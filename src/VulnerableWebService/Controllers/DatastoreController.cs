@@ -19,7 +19,7 @@ namespace VulnerableWebService.Controllers
         [HttpGet]
         public string GetFileContents(string path)
         {
-            logger.LogInformation($"Getting contents of file '{path}' for user '{HttpContext.User.Identity.Name}'");
+            logger.LogInformation($"Getting contents of file '{path}' for user '{HttpContext.Request.Query["username"]}'");
             return System.IO.File.Exists(path) ? System.IO.File.ReadAllText(path) : null;
         }
 
