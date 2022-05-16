@@ -10,6 +10,11 @@ namespace VulnerableWebService.Controllers
     {
         private readonly ILogger<DatastoreController> logger;
 
+        public DatastoreController(ILogger<DatastoreController> logger)
+        {
+            this.logger = logger;
+        }
+
         [HttpGet]
         public string GetFileContents(string path)
         {
