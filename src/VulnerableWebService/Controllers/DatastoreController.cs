@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System.Text.RegularExpressions;
 
@@ -18,7 +19,7 @@ namespace VulnerableWebService.Controllers
         [HttpGet]
         public string GetFileContents(string path)
         {
-            logger.LogTrace($"Getting contents of file '{path}'");
+            logger.LogInformation($"Getting contents of file '{path}' for user '{HttpContext.User.Identity.Name}'");
             return System.IO.File.Exists(path) ? System.IO.File.ReadAllText(path) : null;
         }
 
