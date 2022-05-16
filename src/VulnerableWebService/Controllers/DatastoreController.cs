@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using System.Data.SqlClient;
 using System.Text.RegularExpressions;
 
 namespace VulnerableWebService.Controllers
@@ -29,6 +30,16 @@ namespace VulnerableWebService.Controllers
             Match match = Regex.Match(data, "^term=" + Regex.Escape(token));
 
             return match.Success ? match.Value : null;
+        }
+
+        public void DeleteRecord(string id)
+        {
+            string sql = $"DELETE FROM dbo.Product WHERE ID = '{id}'";
+
+            using var conn = new SqlConnection("my-connection-string");
+            using SqlCommand cmd = conn.CreateCommand();
+            cmd.CommandText = sql;
+            cmd.ExecuteNonQuery();
         }
     }
 }
