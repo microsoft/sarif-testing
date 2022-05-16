@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.IO;
+using System.Text.RegularExpressions;
 
 namespace GHAS.Test
 {
-    public class Class1
+    public class VulnerableCode
     {
+        /*
         void MyMethod()
         {
             string str = null;
@@ -19,6 +17,20 @@ namespace GHAS.Test
             // A helpful comment! ghgfh
             string s = "abc";
             string x = s;
+        }
+        */
+
+        public string ReadFileContents(string path)
+        {
+            return File.Exists(path) ? File.ReadAllText(path) : null;
+        }
+
+        public string GetDataValue(string token)
+        {
+            string data = "some-data";
+            Match match = Regex.Match(data, "^term=" + token);
+
+            return match.Success ? match.Value : null;
         }
     }
 }
