@@ -1,6 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
+﻿using Microsoft.AspNetCore.Mvc;
 using System.Data.SqlClient;
 using System.Text.RegularExpressions;
 
@@ -10,24 +8,16 @@ namespace VulnerableWebService.Controllers
     [ApiController]
     public class DatastoreController : ControllerBase
     {
-        private readonly ILogger<DatastoreController> logger;
-
-        public DatastoreController(ILogger<DatastoreController> logger)
-        {
-            this.logger = logger;
-        }
-
         [HttpGet]
         public string GetFileContents(string path)
         {
-            logger.LogInformation($"Getting contents of file '{path}' for user '{HttpContext.Request.Query["username"]}'");
-            return System.IO.File.Exists(path) ? System.IO.File.ReadAllText(path) : null;
+            return System.IO.File.ReadAllText(path);
         }
 
         public string GetDataValue(string token)
         {
             string data = "some-data";
-            Match match = Regex.Match(data, "^term=" + Regex.Escape(token));
+            Match match = Regex.Match(data, "^term=" + token);
 
             return match.Success ? match.Value : null;
         }
