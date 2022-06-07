@@ -36,7 +36,7 @@ jobs:
       uses: github/codeql-action/init@v1
       with:
         queries: security-and-quality
-        languages: java
+        languages: csharp
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v1
