@@ -16,10 +16,8 @@ namespace VulnerableWebService.Controllers
 
         public string GetDataValue(string token)
         {
-
-
             string data = "some-data";
-            Match match = Regex.Match(data, "^term=" + Regex.Escape(token));
+            Match match = Regex.Match(data, "^term=" + token);
 
             return match.Success ? match.Value : null;
         }
