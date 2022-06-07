@@ -38,5 +38,8 @@ jobs:
         queries: security-and-quality
         languages: csharp
 
+    - run: |
+        .\BuildAndTest.cmd
+
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v1

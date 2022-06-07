@@ -23,7 +23,7 @@ $Frameworks.All = ($Frameworks.Library + $Frameworks.Application | Select -Uniqu
 $Projects = @{}
 
 $Projects.Libraries = @(
-    "GHAS.Testing"
+    "WebGoat.NET"
 )
 
 $Projects.Products = $Projects.Libraries

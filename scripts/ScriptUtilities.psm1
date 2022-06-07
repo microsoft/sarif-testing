@@ -16,7 +16,7 @@ $SourceRoot = Join-Path $RepoRoot "src"
 $BuildPropsPath = Join-Path $SourceRoot "build.props"
 $BuildRoot = Join-Path $RepoRoot "bld"
 $BinRoot = Join-Path $BuildRoot "bin"
-$SolutionFile = "GHAS.Test.sln"
+$SolutionFile = "WebGoat.NET.sln"
 
 $MSBuildXmlNamespaces = @{ msbuild = "http://schemas.microsoft.com/developer/msbuild/2003" }
 
