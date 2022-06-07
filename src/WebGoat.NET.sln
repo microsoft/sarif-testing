@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32510.428
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebGoat.NET", "WebGoat\WebGoat.NET.csproj", "{83B04441-0F79-4424-AAD0-46E0C3CDDAA1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebGoat.NET", "WebGoat.NET\WebGoat.NET.csproj", "{83B04441-0F79-4424-AAD0-46E0C3CDDAA1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,7 +23,7 @@ Global
 		SolutionGuid = {76B554F2-2F3B-4C8F-8F86-3FDA6264628B}
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = WebGoat\WebGoat.NET.csproj
+		StartupItem = WebGoat.NET\WebGoat.NET.csproj
 		Policies = $0
 		$0.DotNetNamingPolicy = $1
 		$1.DirectoryNamespaceAssociation = PrefixedFlat

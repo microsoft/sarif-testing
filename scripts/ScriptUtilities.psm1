@@ -13,6 +13,7 @@ $InformationPreference = "Continue"
 $RepoRoot = $(Resolve-Path $PSScriptRoot\..).Path
 $Platform = "AnyCPU"
 $SourceRoot = Join-Path $RepoRoot "src"
+$NuGetPackageRoot = "$SourceRoot\packages"
 $BuildPropsPath = Join-Path $SourceRoot "build.props"
 $BuildRoot = Join-Path $RepoRoot "bld"
 $BinRoot = Join-Path $BuildRoot "bin"
@@ -79,4 +80,5 @@ Export-ModuleMember -Variable `
     Platform, `
     SampleSolutionFile, `
     SolutionFile, `
-    SourceRoot
+    SourceRoot, `
+    NuGetPackageRoot
