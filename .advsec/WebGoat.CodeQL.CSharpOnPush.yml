@@ -1,5 +1,5 @@
 pool:
-  name: Azure Pipelines
+  vmImage: "windows-latest"
 steps:
 - task: ms-rtaket.codeql-scanning-1es.codeql-scanning-1es-init-task.codeqlscanning1esinit@0
   displayName: 'CodeQL Scanning (1ES) Initialize for '
