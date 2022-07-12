@@ -3,15 +3,3 @@ trigger:
 
 pool:
   vmImage: 'windows-latest'
-
-steps:
-- task: ms-rtaket.codeql-scanning-1es.codeql-scanning-1es-init-task.codeqlscanning1esinit@0
-  displayName: 'CodeQL Scanning (1ES) Initialize for '
-- task: ms-rtaket.codeql-scanning-1es.codeql-scanning-1es-autobuild-task.codeqlscanning1esautobuild@0
-  displayName: 'CodeQL Scanning (1ES) AutoBuild'
-- task: ms-rtaket.codeql-scanning-1es.codeql-scanning-1es-analyze-task.codeqlscanning1esanalyze@0
-  displayName: 'CodeQL Scanning (1ES) Analyze'
-- task: PublishBuildArtifacts@1
-  displayName: 'Publish Artifact: CodeAnalysisLogs'
-  inputs:
-    ArtifactName: CodeAnalysisLogs
