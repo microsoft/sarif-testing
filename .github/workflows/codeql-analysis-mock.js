@@ -112,6 +112,37 @@ const results = [
     },
     // Line 20: cs/regex-injection
     {
+        "artifactChanges": [
+            {
+                "artifactLocation": {
+                    "uri": "src/VulnerableWebService/Controllers/DatastoreController.cs"
+                },
+                "replacements": [
+                    {
+                        "deletedRegion": {
+                            "endColumn": 45,
+                            "endLine": 20,
+                            "startColumn": 45,
+                            "startLine": 20
+                        },
+                        "insertedContent": {
+                            "text": "Regex.escape("
+                        }
+                    },
+                    {
+                        "deletedRegion": {
+                            "endColumn": 61,
+                            "endLine": 20,
+                            "startColumn": 61,
+                            "startLine": 20
+                        },
+                        "insertedContent": {
+                            "text": ")"
+                        }
+                    }
+                ]
+            }
+        ],
         "codeFlows": [
             {
                 "threadFlows": [
