@@ -3,6 +3,7 @@ const { readFileSync, writeFileSync } = require('fs')
 const lines = readFileSync('src/VulnerableWebService/Controllers/DatastoreController.cs', 'utf8').split('\n')
 
 const results = [
+    // Line 14: cs/path-injection
     {
         "codeFlows": [
             {
@@ -109,112 +110,7 @@ const results = [
         },
         "ruleId": "cs/path-injection"
     },
-    {
-        "codeFlows": [
-            {
-                "threadFlows": [
-                    {
-                        "locations": [
-                            {
-                                "location": {
-                                    "message": {
-                                        "text": "id : String"
-                                    },
-                                    "physicalLocation": {
-                                        "artifactLocation": {
-                                            "index": 0,
-                                            "uri": "src/VulnerableWebService/Controllers/DatastoreController.cs"
-                                        },
-                                        "region": {
-                                            "endColumn": 43,
-                                            "endLine": 25,
-                                            "startColumn": 41,
-                                            "startLine": 25
-                                        }
-                                    }
-                                }
-                            },
-                            {
-                                "location": {
-                                    "message": {
-                                        "text": "access to local variable sql"
-                                    },
-                                    "physicalLocation": {
-                                        "artifactLocation": {
-                                            "index": 0,
-                                            "uri": "src/VulnerableWebService/Controllers/DatastoreController.cs"
-                                        },
-                                        "region": {
-                                            "endColumn": 34,
-                                            "endLine": 31,
-                                            "startColumn": 31,
-                                            "startLine": 31
-                                        }
-                                    }
-                                }
-                            }
-                        ]
-                    }
-                ]
-            }
-        ],
-        "correlationGuid": "46bff074-af74-4aac-9cc5-e646fced8216",
-        "level": "error",
-        "locations": [
-            {
-                "physicalLocation": {
-                    "artifactLocation": {
-                        "index": 0,
-                        "uri": "src/VulnerableWebService/Controllers/DatastoreController.cs"
-                    },
-                    "region": {
-                        "endColumn": 34,
-                        "endLine": 31,
-                        "startColumn": 31,
-                        "startLine": 31
-                    }
-                }
-            }
-        ],
-        "message": {
-            "text": "Query might include code from [this ASP.NET Core MVC action method parameter](1)."
-        },
-        "partialFingerprints": {
-            "primaryLocationLineHash": "53a937a13278ace8:1"
-        },
-        "properties": {
-            "github/alertNumber": 73,
-            "github/alertUrl": "https://api.github.com/repos/microsoft/sarif-testing/code-scanning/alerts/73"
-        },
-        "relatedLocations": [
-            {
-                "id": 1,
-                "message": {
-                    "text": "this ASP.NET Core MVC action method parameter"
-                },
-                "physicalLocation": {
-                    "artifactLocation": {
-                        "index": 0,
-                        "uri": "src/VulnerableWebService/Controllers/DatastoreController.cs"
-                    },
-                    "region": {
-                        "endColumn": 43,
-                        "endLine": 25,
-                        "startColumn": 41,
-                        "startLine": 25
-                    }
-                }
-            }
-        ],
-        "rule": {
-            "id": "cs/sql-injection",
-            "toolComponent": {
-                "index": 0
-            },
-            "index": 3
-        },
-        "ruleId": "cs/sql-injection"
-    },
+    // Line 20: cs/regex-injection
     {
         "codeFlows": [
             {
@@ -321,6 +217,7 @@ const results = [
         },
         "ruleId": "cs/regex-injection"
     },
+    // Line 29: cs/insecure-sql-connection
     {
         "correlationGuid": "9fddcd95-eb30-4927-999b-b0fbca526ba8",
         "level": "error",
@@ -378,6 +275,113 @@ const results = [
             "index": 0
         },
         "ruleId": "cs/insecure-sql-connection"
+    },
+    // Line 31: cs/sql-injection
+    {
+        "codeFlows": [
+            {
+                "threadFlows": [
+                    {
+                        "locations": [
+                            {
+                                "location": {
+                                    "message": {
+                                        "text": "id : String"
+                                    },
+                                    "physicalLocation": {
+                                        "artifactLocation": {
+                                            "index": 0,
+                                            "uri": "src/VulnerableWebService/Controllers/DatastoreController.cs"
+                                        },
+                                        "region": {
+                                            "endColumn": 43,
+                                            "endLine": 25,
+                                            "startColumn": 41,
+                                            "startLine": 25
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "location": {
+                                    "message": {
+                                        "text": "access to local variable sql"
+                                    },
+                                    "physicalLocation": {
+                                        "artifactLocation": {
+                                            "index": 0,
+                                            "uri": "src/VulnerableWebService/Controllers/DatastoreController.cs"
+                                        },
+                                        "region": {
+                                            "endColumn": 34,
+                                            "endLine": 31,
+                                            "startColumn": 31,
+                                            "startLine": 31
+                                        }
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "correlationGuid": "46bff074-af74-4aac-9cc5-e646fced8216",
+        "level": "error",
+        "locations": [
+            {
+                "physicalLocation": {
+                    "artifactLocation": {
+                        "index": 0,
+                        "uri": "src/VulnerableWebService/Controllers/DatastoreController.cs"
+                    },
+                    "region": {
+                        "endColumn": 34,
+                        "endLine": 31,
+                        "startColumn": 31,
+                        "startLine": 31
+                    }
+                }
+            }
+        ],
+        "message": {
+            "text": "Query might include code from [this ASP.NET Core MVC action method parameter](1)."
+        },
+        "partialFingerprints": {
+            "primaryLocationLineHash": "53a937a13278ace8:1"
+        },
+        "properties": {
+            "github/alertNumber": 73,
+            "github/alertUrl": "https://api.github.com/repos/microsoft/sarif-testing/code-scanning/alerts/73"
+        },
+        "relatedLocations": [
+            {
+                "id": 1,
+                "message": {
+                    "text": "this ASP.NET Core MVC action method parameter"
+                },
+                "physicalLocation": {
+                    "artifactLocation": {
+                        "index": 0,
+                        "uri": "src/VulnerableWebService/Controllers/DatastoreController.cs"
+                    },
+                    "region": {
+                        "endColumn": 43,
+                        "endLine": 25,
+                        "startColumn": 41,
+                        "startLine": 25
+                    }
+                }
+            }
+        ],
+        "rule": {
+            "id": "cs/sql-injection",
+            "toolComponent": {
+                "index": 0
+            },
+            "index": 3
+        },
+        "ruleId": "cs/sql-injection"
     }
 ]
 
