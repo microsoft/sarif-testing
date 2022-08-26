@@ -112,37 +112,6 @@ const results = [
     },
     // Line 20: cs/regex-injection
     {
-        "artifactChanges": [
-            {
-                "artifactLocation": {
-                    "uri": "src/VulnerableWebService/Controllers/DatastoreController.cs"
-                },
-                "replacements": [
-                    {
-                        "deletedRegion": {
-                            "endColumn": 45,
-                            "endLine": 20,
-                            "startColumn": 45,
-                            "startLine": 20
-                        },
-                        "insertedContent": {
-                            "text": "Regex.escape("
-                        }
-                    },
-                    {
-                        "deletedRegion": {
-                            "endColumn": 61,
-                            "endLine": 20,
-                            "startColumn": 61,
-                            "startLine": 20
-                        },
-                        "insertedContent": {
-                            "text": ")"
-                        }
-                    }
-                ]
-            }
-        ],
         "codeFlows": [
             {
                 "threadFlows": [
@@ -192,6 +161,44 @@ const results = [
             }
         ],
         "correlationGuid": "43521ed1-0647-408b-8d37-c35931c887b0",
+        "fixes": [
+            {
+                "description": {
+                  "text": "Escape regex"
+                },
+                "artifactChanges": [
+                    {
+                        "artifactLocation": {
+                            "uri": "src/VulnerableWebService/Controllers/DatastoreController.cs"
+                        },
+                        "replacements": [
+                            {
+                                "deletedRegion": {
+                                    "endColumn": 45,
+                                    "endLine": 20,
+                                    "startColumn": 45,
+                                    "startLine": 20
+                                },
+                                "insertedContent": {
+                                    "text": "Regex.escape("
+                                }
+                            },
+                            {
+                                "deletedRegion": {
+                                    "endColumn": 61,
+                                    "endLine": 20,
+                                    "startColumn": 61,
+                                    "startLine": 20
+                                },
+                                "insertedContent": {
+                                    "text": ")"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
         "level": "error",
         "locations": [
             {
