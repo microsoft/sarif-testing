@@ -15,7 +15,6 @@ namespace OWASP.WebGoat.NET.App_Code
         {
             ProcessStartInfo startInfo = new ProcessStartInfo
             {
-                // Test commit
                 WorkingDirectory = Settings.RootDir,
                 FileName = cmd,
                 Arguments = args,
